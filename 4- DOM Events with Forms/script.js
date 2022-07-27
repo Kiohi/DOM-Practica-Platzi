@@ -1,0 +1,36 @@
+/*
+Se puede realizar eventos de JS en html por medio de 3 formas.
+
+1- Por medio de eventos embebidos en el elemento, de dos formas:
+      <elemento  onclick="JS que se va a ejecutar"></elemento>
+      
+2- Por medio de funciones declarativas para luego usarlas embebidas:
+   function abc(){ 
+      console.log("idk")
+   }
+   <elemento  onclick="abc()"></elemento>
+
+3- Por medio de funciones expresivas, lambda, anónimas o como se les llame usando "addEventListener".
+
+En este ejemplo lo hice con funciones expresivas y addEventListener
+*/
+
+const num1 = document.getElementById("num1");
+const num2 = document.getElementById("num2");
+const calcular = document.getElementById("calculo");
+const resultado = document.getElementById("resultado");
+const resultado2 = document.getElementById("resultado2");
+const form = document.querySelector("form");
+
+form.addEventListener('submit', sum);
+
+function sum(event){
+   console.log({event}); // Para imprimir la lista de propieades que trae el objeto "event" de JS
+   event.preventDefault(); //Para prevenir que el form cargue la página por defecto
+   n1 = parseInt(num1.value);
+   n2 = parseInt(num2.value);
+   resultado.value = (n1 + n2);
+
+   resultado2.innerText = "Concatenado = " + (num1.value + num2.value);
+
+}

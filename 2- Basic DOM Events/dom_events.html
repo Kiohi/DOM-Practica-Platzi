@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>DOM Events</title>
+
+   <style>
+      body{
+         background-color: rgb(25, 22, 49);
+         color: white;
+      }
+   </style>
+</head>
+<body>
+   <h1>Manipulación de DOM por medio de eventos</h1>
+
+   <input type="text" id="num1" placeholder="Escribe algo aquí"><br><br>
+   <input type="text" id="num2" placeholder="Escribe algo aquí"><br><br>
+   <button id="calculo" onclick="sum()">Calcular</button>
+   <input id="resultado" type="text" style="width: 5rem; background-color: white;" disabled>
+
+   <p id="resultado2"></p>
+   <script src="script.js"></script>
+</body>
+</html>
